@@ -83,7 +83,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>Hello World | ☄☄☄呆子☃☃☃ - 以多数人的努力程度， 远不到依靠天赋的地步</title>
+    <title>Blog Writing | ☄☄☄呆子☃☃☃ - 以多数人的努力程度， 远不到依靠天赋的地步</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="default" data-spy="scroll" data-target=".list-group">
     
@@ -129,7 +129,7 @@
   
   <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/hello-world/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/markdown技巧/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
        <meta itemprop="name" content="Ben Li">
        <meta itemprop="description" content="No matter how bad your heart has been broken, the world doesn’t stop for your grief. The sun comes right back up the next day.">
@@ -140,11 +140,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">Hello World</h1>
+      <h1 class="post-title" itemprop="name headline">Blog Writing</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-24T16:07:42+08:00">2018-11-24 16:07:42</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-28T15:11:46+08:00">2018-11-28 15:11:46</time></span>
         </span>
         
         
@@ -152,18 +152,61 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <p><center><img src="https://i.imgur.com/T3vRXSK.jpg" alt=""></center><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+      <p><center><img src="https://i.imgur.com/hG4Xa0U.jpg" alt=""></center><br>&emsp;&emsp;CSDN的markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。<br><a id="more"></a><br><br><br></p>
+<h1 id="Ⅰ-换行"><a href="#Ⅰ-换行" class="headerlink" title="Ⅰ 换行"></a>Ⅰ 换行</h1><p>编辑第一行的时候前后加上<code>&lt;br/&gt;</code>和<code>&lt;/br&gt;</code><br>    <code>&lt;br/&gt;</code><br>    <code>&lt;/br&gt;</code></p>
+<h1 id="Ⅱ-首行缩进"><a href="#Ⅱ-首行缩进" class="headerlink" title="Ⅱ 首行缩进"></a>Ⅱ 首行缩进</h1><pre><code>【1】 &amp;ensp;或&amp;#8194; //半角
+【2】 &amp;emsp;或&amp;#8195; //全角
+【3】 &amp;nbsp;或&amp;#160;
+</code></pre><h1 id="Ⅲ-字体设置"><a href="#Ⅲ-字体设置" class="headerlink" title="Ⅲ 字体设置"></a>Ⅲ 字体设置</h1><h2 id="❶颜色"><a href="#❶颜色" class="headerlink" title="❶颜色"></a>❶颜色</h2><p>在markdown中采用如下方式能够控制文字的<a href="http://www.114la.com/other/rgb.htm" target="_blank" rel="noopener">RGB颜色</a>：</p>
+<pre><code>浅红色文字：&lt;font color=&quot;#dd0000&quot;&gt;浅红色文字&lt;/font&gt;&lt;br /&gt; 
+深红色文字：&lt;font color=&quot;#660000&quot;&gt;深红色文字&lt;/font&gt;&lt;br /&gt; 
+浅绿色文字：&lt;font color=&quot;#00dd00&quot;&gt;浅绿色文字&lt;/font&gt;&lt;br /&gt; 
+深绿色文字：&lt;font color=&quot;#006600&quot;&gt;深绿色文字&lt;/font&gt;&lt;br /&gt; 
+浅蓝色文字：&lt;font color=&quot;#0000dd&quot;&gt;浅蓝色文字&lt;/font&gt;&lt;br /&gt; 
+深蓝色文字：&lt;font color=&quot;#000066&quot;&gt;深蓝色文字&lt;/font&gt;&lt;br /&gt; 
+浅黄色文字：&lt;font color=&quot;#dddd00&quot;&gt;浅黄色文字&lt;/font&gt;&lt;br /&gt; 
+深黄色文字：&lt;font color=&quot;#666600&quot;&gt;深黄色文字&lt;/font&gt;&lt;br /&gt; 
+浅青色文字：&lt;font color=&quot;#00dddd&quot;&gt;浅青色文字&lt;/font&gt;&lt;br /&gt; 
+深青色文字：&lt;font color=&quot;#006666&quot;&gt;深青色文字&lt;/font&gt;&lt;br /&gt; 
+浅紫色文字：&lt;font color=&quot;#dd00dd&quot;&gt;浅紫色文字&lt;/font&gt;&lt;br /&gt; 
+深紫色文字：&lt;font color=&quot;#660066&quot;&gt;深紫色文字&lt;/font&gt;&lt;br /&gt; 
+</code></pre><p>浅红色文字：<font color="#dd0000">浅红色文字：</font><br>深红色文字：<font color="#660000">深红色文字</font><br>浅绿色文字：<font color="#00dd00">浅绿色文字</font><br>深绿色文字：<font color="#006600">深绿色文字</font><br>浅蓝色文字：<font color="#0000dd">浅蓝色文字</font><br>深蓝色文字：<font color="#000066">深蓝色文字</font><br>浅黄色文字：<font color="#dddd00">浅黄色文字</font><br>深黄色文字：<font color="#666600">深黄色文字</font><br>浅青色文字：<font color="#00dddd">浅青色文字</font><br>深青色文字：<font color="#006666">深青色文字</font><br>浅紫色文字：<font color="#dd00dd">浅紫色文字</font><br>深紫色文字：<font color="#660066">深紫色文字</font></p>
+<h2 id="❷颜色"><a href="#❷颜色" class="headerlink" title="❷颜色"></a>❷颜色</h2><pre><code>size为1：&lt;font size=&quot;1&quot;&gt;size为1&lt;/font&gt;&lt;br /&gt; 
+size为2：&lt;font size=&quot;2&quot;&gt;size为2&lt;/font&gt;&lt;br /&gt; 
+size为3：&lt;font size=&quot;3&quot;&gt;size为3&lt;/font&gt;&lt;br /&gt; 
+size为4：&lt;font size=&quot;4&quot;&gt;size为4&lt;/font&gt;&lt;br /&gt; 
+size为10：&lt;font size=&quot;10&quot;&gt;size为10&lt;/font&gt;&lt;br /&gt; 
+</code></pre><p>size为1：<font size="1">size为1</font><br><br>size为2：<font size="2">size为2</font><br><br>size为3：<font size="3">size为3</font><br><br>size为4：<font size="4">size为4</font><br><br>size为10：<font size="10">size为10</font><br> <font size="5"></font></p>
+<h2 id="❸字体"><a href="#❸字体" class="headerlink" title="❸字体"></a>❸字体</h2><pre><code>&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;
+&lt;font face=&quot;宋体&quot;&gt;我是宋体字&lt;/font&gt;
+&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑字&lt;/font&gt;
+&lt;font face=&quot;fantasy&quot;&gt;我是fantasy字&lt;/font&gt;
+&lt;font face=&quot;Helvetica&quot;&gt;我是Helvetica字&lt;/font&gt;
+</code></pre><p><font face="黑体">我是黑体字</font></p>
+<p><font face="宋体">我是宋体字</font></p>
+<p><font face="微软雅黑">我是微软雅黑字</font></p>
+<p><font face="fantasy">我是fantasy字</font></p>
+<p><font face="Helvetica">我是Helvetica字</font></p>
+<h2 id="❹背景色"><a href="#❹背景色" class="headerlink" title="❹背景色"></a>❹背景色</h2><pre><code>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#FF00FF&gt;背景色的设置是按照十六进制颜色值：#7FFFD4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#FF83FA&gt;背景色的设置是按照十六进制颜色值：#FF83FA&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#D1EEEE&gt;背景色的设置是按照十六进制颜色值：#D1EEEE&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#C0FF3E&gt;背景色的设置是按照十六进制颜色值：#C0FF3E&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#54FF9F&gt;背景色的设置是按照十六进制颜色值：#54FF9F&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</code></pre><p><tr><td bgcolor="#FF00FF">背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></p>
+<p><tr><td bgcolor="#FF83FA">背景色的设置是按照十六进制颜色值：#FF83FA</td></tr></p>
+<p><tr><td bgcolor="#D1EEEE">背景色的设置是按照十六进制颜色值：#D1EEEE</td></tr></p>
+<p><tr><td bgcolor="#C0FF3E">背景色的设置是按照十六进制颜色值：#C0FF3E</td></tr></p>
+<p><tr><td bgcolor="#54FF9F">背景色的设置是按照十六进制颜色值：#54FF9F</td></tr></p>
+<p><center><img src="https://i.imgur.com/VUKHQEd.png" alt=""></center><br><a href="https://blog.csdn.net/manjianchao/article/details/53668280" target="_blank" rel="noopener">参考连接</a>：<a href="https://blog.csdn.net/manjianchao/article/details/53668280" target="_blank" rel="noopener">https://blog.csdn.net/manjianchao/article/details/53668280</a></p>
 
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/技巧/" rel="tag"><i class="fas fa-tags"></i>技巧</a>
+        
+      </div>
       
     </footer>
   </article>
@@ -172,12 +215,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/11/08/写作技巧/" rel="next" title="如何提升写作技巧"><i class="fas fa-angle-left"></i><span class="nav-title">如何提升写作技巧</span></a>
+      <a href="/2018/11/24/hello-world/" rel="next" title="Hello World"><i class="fas fa-angle-left"></i><span class="nav-title">Hello World</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2018/11/28/markdown技巧/" rel="prev" title="Blog Writing"><span class="nav-title">Blog Writing</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -248,7 +289,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>Table of Contents</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Ⅰ-换行"><span class="toc-text">Ⅰ 换行</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Ⅱ-首行缩进"><span class="toc-text">Ⅱ 首行缩进</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Ⅲ-字体设置"><span class="toc-text">Ⅲ 字体设置</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#❶颜色"><span class="toc-text">❶颜色</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#❷颜色"><span class="toc-text">❷颜色</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#❸字体"><span class="toc-text">❸字体</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#❹背景色"><span class="toc-text">❹背景色</span></a></li></ol></li></ol></div>
     </div>
     
     
