@@ -101,18 +101,18 @@
       
     </div>
     <nav id="nav" class="nav">
-      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
       <ul id="menu" role="menubar" aria-hidden="false">
         
-        <li role="menuitem"><a href="/">Home</a></li>
+        <li role="menuitem"><a href="/">首页</a></li>
         
-        <li role="menuitem"><a href="/archives/">Archives</a></li>
+        <li role="menuitem"><a href="/archives/">归档</a></li>
         
-        <li role="menuitem"><a href="/categories/">Categories</a></li>
+        <li role="menuitem"><a href="/categories/">分类</a></li>
         
-        <li role="menuitem"><a href="/tags/">Tags</a></li>
+        <li role="menuitem"><a href="/tags/">标签</a></li>
         
-        <li role="menuitem"><a href="/about">About</a></li>
+        <li role="menuitem"><a href="/about">关于</a></li>
         
       </ul>
     </nav>
@@ -156,8 +156,7 @@
 <p><strong>论文作者</strong>：香港科技大学和深圳Altizure公司的研究团队。</p>
 <p><strong>简介</strong>： 该团队于2018年提出了一个高精度高效率的三维重建网络 —— MVSNet，被ECCV2018选为Oral。而今针对原MVSNet由于过于耗费内存而难以应用到大尺度场景的问题，提出了“R-MVSNet”（Recurrent MVSNet），该网络在原MVSNet的基础上进行改进，引入循环神经网络架构，可依序地在深度方向通过GRU单元正则化2D的代价图，较大程度地缓解了内存消耗，进而使大尺度的三维场景重建成为可能，该文章已被CVPR2019接收。</p>
 <p>#2.MVSNet回顾<br>由于R-MVSNet是在原MVSNet上进行的改进，故对MVSNet进行回顾有一定必要性。</p>
-<p>MVSNet网络架构如图一所示：<br><img src="https://i.imgur.com/IfKCghH.jpg" alt=""><br>输入进网络的多视影像首先经由2D的特征提取层以及可微的单应矩阵变换以构建代价量，再经由三维卷积网络的优化得到三维概率空间，最后基于参考影像进行进一步优化。</p>
-<p>MVSNet主要贡献在于：</p>
+<p>MVSNet网络架构如图一所示：<br><img src="https://i.imgur.com/IfKCghH.jpg" alt=""><br>输入进网络的多视影像首先经由2D的特征提取层以及可微的单应矩阵变换以构建代价量，再经由三维卷积网络的优化得到三维概率空间，最后基于参考影像进行进一步优化。<br><a id="more"></a><br>MVSNet主要贡献在于：</p>
 <ol>
 <li>通过<strong>可微单应矩阵（Differentiable Homography）</strong>将相机几何嵌入到网络，以帮助实现端到端的深度神经网络。</li>
 <li>设计了<strong>基于方差的多视匹配代价计算准则</strong>，将任意数量的像素特征向量映射为一个匹配代价向量，以帮助网络适用于不定数量的图像输入。<br>#3. R-MVSNet介绍<br>R-MVSNet相较于MVSNet，引入了循环神经网络架构，依序地在深度方向通过GRU单元正则化2D的代价图，以减少内存消耗进而使其适用于大尺度的三维场景重建。</li>
@@ -210,7 +209,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control">
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -225,7 +224,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">Archives</div>
+      <div class="site-count-title">归档</div>
       <div><a href="/archives/">4</a></div>
     </div>
     
@@ -234,7 +233,7 @@
     <span class="site-count-divider divider">|</span>
     
     <div class="categories-count">
-      <div class="site-count-title">Categories</div>
+      <div class="site-count-title">分类</div>
       <div><a href="/categories/">0</a></div>
     </div>
     
@@ -243,7 +242,7 @@
     <span class="site-count-divider divider">|</span>
     
     <div class="tags-count">
-      <div class="site-count-title">Tags</div>
+      <div class="site-count-title">标签</div>
       <div><a href="/tags/">4</a></div>
     </div>
     
@@ -266,7 +265,7 @@
     
     <hr>
     <div class="social-link sidebar-item">
-      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <div><i class="far fa-address-card"></i>社交链接<p></p></div>
       <ul>
         
         <li><i class="fas fa-envelope"></i><a href="mailto:Liping4204@163.com" target="_blank">E-Mail</a></li>
@@ -281,7 +280,7 @@
     
     <hr>
     <div class="blogroll sidebar-item">
-      <div><i class="fas fa-link"></i>Blogroll</div>
+      <div><i class="fas fa-link"></i>友情链接</div>
       <ul>
         
         <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -317,7 +316,7 @@
 <footer id="footer" class="footer" style="background: #33363b;">
   <div class="container">
     <div class="back-to-top">
-      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
     </div>
     <div class="footer-container">
       <div class="footer-left">
@@ -326,7 +325,7 @@
         </div>
         
         <div class="busuanzi">
-        <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
         </div>
         
       </div>
@@ -337,7 +336,7 @@
           
         </i></div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
