@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-15T14:16:33.928Z</updated>
+  <updated>2019-03-16T01:27:26.310Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,22 +21,22 @@
     <link href="http://yoursite.com/2019/03/15/3.15/"/>
     <id>http://yoursite.com/2019/03/15/3.15/</id>
     <published>2019-03-15T13:41:55.657Z</published>
-    <updated>2019-03-15T14:16:33.928Z</updated>
+    <updated>2019-03-16T01:27:26.310Z</updated>
     
-    <content type="html"><![CDATA[<p>#1.导读<br><strong>目标读者</strong>：对MVS（multi-view stereo，多视几何）问题感兴趣的人群。MVS旨在利用多张影像（影像及对应的相机几何）恢复出三维场景。</p><p><strong>论文作者</strong>：香港科技大学和深圳Altizure公司的研究团队。</p><p><strong>简介</strong>： 该团队于2018年提出了一个高精度高效率的三维重建网络 —— MVSNet，被ECCV2018选为Oral。而今针对原MVSNet由于过于耗费内存而难以应用到大尺度场景的问题，提出了“R-MVSNet”（Recurrent MVSNet），该网络在原MVSNet的基础上进行改进，引入循环神经网络架构，可依序地在深度方向通过GRU单元正则化2D的代价图，较大程度地缓解了内存消耗，进而使大尺度的三维场景重建成为可能，该文章已被CVPR2019接收。</p><p>#2.MVSNet回顾<br>由于R-MVSNet是在原MVSNet上进行的改进，故对MVSNet进行回顾有一定必要性。</p><p>MVSNet网络架构如图一所示：<br><img src="https://i.imgur.com/IfKCghH.jpg" alt=""><br>输入进网络的多视影像首先经由2D的特征提取层以及可微的单应矩阵变换以构建代价量，再经由三维卷积网络的优化得到三维概率空间，最后基于参考影像进行进一步优化。<br><a id="more"></a><br>MVSNet主要贡献在于：</p><ol><li>通过<strong>可微单应矩阵（Differentiable Homography）</strong>将相机几何嵌入到网络，以帮助实现端到端的深度神经网络。</li><li>设计了<strong>基于方差的多视匹配代价计算准则</strong>，将任意数量的像素特征向量映射为一个匹配代价向量，以帮助网络适用于不定数量的图像输入。<br>#3. R-MVSNet介绍<br>R-MVSNet相较于MVSNet，引入了循环神经网络架构，依序地在深度方向通过GRU单元正则化2D的代价图，以减少内存消耗进而使其适用于大尺度的三维场景重建。</li></ol><p>MVSNet网络架构如图二所示：<br><img src="https://i.imgur.com/7yO7fRl.jpg" alt=""><br>输入的多视影像首先经由2D的特征提取层提取特征，经由可微的单应矩阵变换到参考影像的相机视锥体的正面平行面上，然后在不同深度计算代价，并经由卷积的GRU单元进行正则化，使在深度方向获取几何和单向的语义信息成为可能。该网络将问题视为分类问题，以交叉熵作为损失函数。</p><p>在完整的三维重建的流程中，除去R-MVSNet所担任的生成深度图的模块，其他非学习的模块还包括预处理，深度图优化，深度图滤波与融合。</p><p>#4. 实验及结果<br>网络在DTU数据集上进行训练，实现框架为tensorflow。</p><p>测试数据集有DTU，Tanks and Temples，ETH3D( 图二：数据集具体结介绍见论文 )。</p><p>在DTU数据集上进行测试的定量结果图如图三所示，结果表明就重建的完整性和整体的质量而言该方法优于其他的方法。重建效果如图四所示。</p><center><img src="https://i.imgur.com/fx2PI2r.jpg" alt=""></center><p><center>图三：以DTU为测试集的定量结果</center><br><img src="https://i.imgur.com/L05GT8Y.jpg" alt=""></p><p><center>图四：在DTU数据中Scan23和Scan10上的重建结果及Groud Truth</center><br>R-MVSNet和MVSNet在各测试数据集上的表现对比如图五所示，结果表明R-MVSNet的表现明显优于MVSNet，成倍地减小了内存消耗，可处理更大尺度的三维场景。<br><img src="https://i.imgur.com/AUFq0gM.jpg" alt=""></p><p><center>图五：R-MVSNet与MVSNet在各测试数据集上的表现对比。</center></p><p>#5.论文及代码链接<br>论文链接：<br><a href="https://arxiv.org/abs/1902.10556" target="_blank" rel="noopener">https://arxiv.org/abs/1902.10556</a></p><p>代码链接：<br><a href="https://github.com/YoYo000/MVSNet" target="_blank" rel="noopener">https://github.com/YoYo000/MVSNet</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h1><p><strong>目标读者</strong>：对MVS（multi-view stereo，多视几何）问题感兴趣的人群。MVS旨在利用多张影像（影像及对应的相机几何）恢复出三维场景。</p><p><strong>论文作者</strong>：香港科技大学和深圳Altizure公司的研究团队。</p><p><strong>简介</strong>： 该团队于2018年提出了一个高精度高效率的三维重建网络 —— MVSNet，被ECCV2018选为Oral。而今针对原MVSNet由于过于耗费内存而难以应用到大尺度场景的问题，提出了“R-MVSNet”（Recurrent MVSNet），该网络在原MVSNet的基础上进行改进，引入循环神经网络架构，可依序地在深度方向通过GRU单元正则化2D的代价图，较大程度地缓解了内存消耗，进而使大尺度的三维场景重建成为可能，该文章已被CVPR2019接收。</p><h1 id="MVSNet回顾"><a href="#MVSNet回顾" class="headerlink" title="MVSNet回顾"></a>MVSNet回顾</h1><p>由于R-MVSNet是在原MVSNet上进行的改进，故对MVSNet进行回顾有一定必要性。</p><p>MVSNet网络架构如图一所示：<br><img src="https://i.imgur.com/IfKCghH.jpg" alt=""><br>输入进网络的多视影像首先经由2D的特征提取层以及可微的单应矩阵变换以构建代价量，再经由三维卷积网络的优化得到三维概率空间，最后基于参考影像进行进一步优化。</p><a id="more"></a><p><br><br></p><p>MVSNet主要贡献在于：</p><ol><li>通过<strong>可微单应矩阵（Differentiable Homography）</strong>将相机几何嵌入到网络，以帮助实现端到端的深度神经网络。</li><li>设计了<strong>基于方差的多视匹配代价计算准则</strong>，将任意数量的像素特征向量映射为一个匹配代价向量，以帮助网络适用于不定数量的图像输入。<h1 id="R-MVSNet介绍"><a href="#R-MVSNet介绍" class="headerlink" title="R-MVSNet介绍"></a>R-MVSNet介绍</h1>R-MVSNet相较于MVSNet，引入了循环神经网络架构，依序地在深度方向通过GRU单元正则化2D的代价图，以减少内存消耗进而使其适用于大尺度的三维场景重建。</li></ol><p>MVSNet网络架构如图二所示：<br><img src="https://i.imgur.com/7yO7fRl.jpg" alt=""><br>输入的多视影像首先经由2D的特征提取层提取特征，经由可微的单应矩阵变换到参考影像的相机视锥体的正面平行面上，然后在不同深度计算代价，并经由卷积的GRU单元进行正则化，使在深度方向获取几何和单向的语义信息成为可能。该网络将问题视为分类问题，以交叉熵作为损失函数。</p><p>在完整的三维重建的流程中，除去R-MVSNet所担任的生成深度图的模块，其他非学习的模块还包括预处理，深度图优化，深度图滤波与融合。</p><h1 id="实验及结果"><a href="#实验及结果" class="headerlink" title="实验及结果"></a>实验及结果</h1><p>网络在DTU数据集上进行训练，实现框架为tensorflow。</p><p>测试数据集有DTU，Tanks and Temples，ETH3D( 图二：数据集具体结介绍见论文 )。</p><p>在DTU数据集上进行测试的定量结果图如图三所示，结果表明就重建的完整性和整体的质量而言该方法优于其他的方法。重建效果如图四所示。</p><center><img src="https://i.imgur.com/fx2PI2r.jpg" alt=""></center><center>图三：以DTU为测试集的定量结果</center><br><img src="https://i.imgur.com/L05GT8Y.jpg" alt=""><br><center>图四：在DTU数据中Scan23和Scan10上的重建结果及Groud Truth</center><br>R-MVSNet和MVSNet在各测试数据集上的表现对比如图五所示，结果表明R-MVSNet的表现明显优于MVSNet，成倍地减小了内存消耗，可处理更大尺度的三维场景。<br><img src="https://i.imgur.com/AUFq0gM.jpg" alt=""><br><center>图五：R-MVSNet与MVSNet在各测试数据集上的表现对比。</center><h1 id="论文及代码链接"><a href="#论文及代码链接" class="headerlink" title="论文及代码链接"></a>论文及代码链接</h1><p>论文链接：<br><a href="https://arxiv.org/abs/1902.10556" target="_blank" rel="noopener">https://arxiv.org/abs/1902.10556</a></p><p>代码链接：<br><a href="https://github.com/YoYo000/MVSNet" target="_blank" rel="noopener">https://github.com/YoYo000/MVSNet</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;#1.导读&lt;br&gt;&lt;strong&gt;目标读者&lt;/strong&gt;：对MVS（multi-view stereo，多视几何）问题感兴趣的人群。MVS旨在利用多张影像（影像及对应的相机几何）恢复出三维场景。&lt;/p&gt;
+      &lt;h1 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;headerlink&quot; title=&quot;导读&quot;&gt;&lt;/a&gt;导读&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;目标读者&lt;/strong&gt;：对MVS（multi-view stereo，多视几何）问题感兴趣的人群。MVS旨在利用多张影像（影像及对应的相机几何）恢复出三维场景。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;论文作者&lt;/strong&gt;：香港科技大学和深圳Altizure公司的研究团队。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;： 该团队于2018年提出了一个高精度高效率的三维重建网络 —— MVSNet，被ECCV2018选为Oral。而今针对原MVSNet由于过于耗费内存而难以应用到大尺度场景的问题，提出了“R-MVSNet”（Recurrent MVSNet），该网络在原MVSNet的基础上进行改进，引入循环神经网络架构，可依序地在深度方向通过GRU单元正则化2D的代价图，较大程度地缓解了内存消耗，进而使大尺度的三维场景重建成为可能，该文章已被CVPR2019接收。&lt;/p&gt;
-&lt;p&gt;#2.MVSNet回顾&lt;br&gt;由于R-MVSNet是在原MVSNet上进行的改进，故对MVSNet进行回顾有一定必要性。&lt;/p&gt;
-&lt;p&gt;MVSNet网络架构如图一所示：&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/IfKCghH.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;输入进网络的多视影像首先经由2D的特征提取层以及可微的单应矩阵变换以构建代价量，再经由三维卷积网络的优化得到三维概率空间，最后基于参考影像进行进一步优化。&lt;br&gt;
+&lt;h1 id=&quot;MVSNet回顾&quot;&gt;&lt;a href=&quot;#MVSNet回顾&quot; class=&quot;headerlink&quot; title=&quot;MVSNet回顾&quot;&gt;&lt;/a&gt;MVSNet回顾&lt;/h1&gt;&lt;p&gt;由于R-MVSNet是在原MVSNet上进行的改进，故对MVSNet进行回顾有一定必要性。&lt;/p&gt;
+&lt;p&gt;MVSNet网络架构如图一所示：&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/IfKCghH.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;输入进网络的多视影像首先经由2D的特征提取层以及可微的单应矩阵变换以构建代价量，再经由三维卷积网络的优化得到三维概率空间，最后基于参考影像进行进一步优化。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="开始" scheme="http://yoursite.com/tags/%E5%BC%80%E5%A7%8B/"/>
+      <category term="文献" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE/"/>
     
   </entry>
   
